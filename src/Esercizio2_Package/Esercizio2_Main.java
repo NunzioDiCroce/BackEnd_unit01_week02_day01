@@ -22,20 +22,26 @@ public class Esercizio2_Main {
 		System.out.println("Calcola le prestazioni della tua auto");
 		System.out.println("Inserisci i km percorsi: ");
 		String km = esercizioDue.nextLine();
-		double kmInt = Integer.parseInt(km);
+		int kmInt = Integer.parseInt(km);
 		System.out.println("Inserisci i litri di carburante consumati: ");
 		String litri = esercizioDue.nextLine();
-		double litriInt = Integer.parseInt(litri);
+		int litriInt = Integer.parseInt(litri);
 
-		// try {
-		double kmLitro = kmInt / litriInt;
-		System.out.println("La tua auto ha registrato un consumo di " + kmLitro + " km/litro");
-		System.out.println("");
-		System.out.println("Termine programma");
+		try {
+			int kmLitro = kmInt / litriInt;
+			System.out.println("La tua auto ha registrato un consumo di " + kmLitro + " km/litro");
+			System.out.println("");
+			System.out.println("Termine programma");
+			System.out.println("Riavviare l'applicazione");
 
-		// } catch () {
+		} catch (ArithmeticException e) {
+			System.out.println("Hai inserito 0 litri, questo valore non è consentito.");
+			System.out.println("");
+			System.out.println("Termine programma");
+			System.out.println("Riavviare l'applicazione");
+		}
 
-		// }
+		esercizioDue.close();
 
 	}
 

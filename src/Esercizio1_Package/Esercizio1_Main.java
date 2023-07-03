@@ -67,6 +67,7 @@ public class Esercizio1_Main {
 
 		System.out.println("");
 		System.out.println("Termine programma");
+		System.out.println("Riavviare l'applicazione");
 
 		esercizioUno.close();
 
