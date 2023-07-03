@@ -3,7 +3,7 @@ package Esercizio3_Package;
 // class definition
 public class ContoOnLine extends ContoCorrente {
 
-	// properties
+	// attributes
 	double maxPrelievo;
 
 	// constructor
@@ -19,9 +19,12 @@ public class ContoOnLine extends ContoCorrente {
 				+ " - Massimo movimenti: " + maxMovimenti + " - Massimo prelievo possibile: " + maxPrelievo);
 	}
 
-	void preleva(double x) {
+	void preleva(double x) throws BancaException {
 		if (x <= maxPrelievo) {
 			super.preleva(x);
+		} else if (x > maxPrelievo) { // method modified
+			throw new BancaException("Il prelievo non è disponibile");
 		}
+
 	}
 }

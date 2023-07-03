@@ -6,10 +6,6 @@ public class Esercizio2_Main {
 
 	public static void main(String[] args) {
 
-		// variables definition
-		// String km;
-		// String litri;
-
 		System.out.println("");
 		System.out.println("ESERCIZIO 2");
 		System.out.println("- - - - - - - - - - - - - - - - - - - -");
