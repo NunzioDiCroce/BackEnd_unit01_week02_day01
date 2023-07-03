@@ -50,17 +50,25 @@ public class Esercizio1_Main {
 			newItem = esercizioUno.nextLine();
 			newItemInt = Integer.parseInt(newItem);
 
-			myArray[positionInt] = newItemInt;
+			// ArrayIndexOutOfBoundsException handling
+			try {
+				myArray[positionInt] = newItemInt;
 
-			System.out.println("");
-			System.out.println("Nuovo Array: " + myArray[0] + " " + myArray[1] + " " + myArray[2] + " " + myArray[3]
-					+ " " + myArray[4]);
+				System.out.println("");
+				System.out.println("Nuovo Array: " + myArray[0] + " " + myArray[1] + " " + myArray[2] + " " + myArray[3]
+						+ " " + myArray[4]);
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("Posizione non valida!");
+			}
+
 		}
 
 		myArray[positionInt] = newItemInt;
 
 		System.out.println("");
 		System.out.println("Termine programma");
+
+		esercizioUno.close();
 
 	}
 
